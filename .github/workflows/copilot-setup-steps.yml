@@ -28,9 +28,5 @@ jobs:
               with:
                   node-version: "20"
 
-            - name: Install antigravity-awesome-skills plugin
-              run: |
-                  # Equivalent to:
-                  #   /plugin marketplace add sickn33/antigravity-awesome-skills
-                  #   /plugin install antigravity-awesome-skills
-                  npx --yes antigravity-awesome-skills --claude
+            - name: Install global tools
+              run: npm install -g prettier eslint typescript ts-node
