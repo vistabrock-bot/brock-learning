@@ -30,3 +30,17 @@ jobs:
 
             - name: Install global tools
               run: npm install -g prettier eslint typescript ts-node
+
+            - name: Install MCP skills
+              run: |
+                npm install -g \
+                  github-mcp-server \
+                  @playwright/mcp \
+                  @modelcontextprotocol/server-memory \
+                  @modelcontextprotocol/server-sequential-thinking \
+                  @modelcontextprotocol/server-filesystem \
+                  @modelcontextprotocol/server-github \
+                  fetch-mcp
+
+            - name: Install Playwright browsers
+              run: npx playwright install --with-deps chromium
